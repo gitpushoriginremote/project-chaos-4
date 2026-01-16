@@ -1,0 +1,80 @@
+:root {
+    --bg-color: #0d0d0d;
+    --accent-color: #ff3e3e;
+    --text-color: #f0f0f0;
+    --card-bg: #1a1a1a;
+}
+
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.landing-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.cta-btn {
+    padding: 1rem 2rem;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: var(--accent-color);
+    color: white;
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+/* APP LAYOUT - BUGGY SECTION */
+.app-body {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background: #000;
+    height: 100vh;
+    padding: 20px;
+    /* BUG: This overlaps main content on small screens or isn't properly fixed */
+    position: absolute;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 40px;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-left: 5px solid var(--accent-color);
+}
+
+.danger-btn {
+    background: var(--accent-color);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
